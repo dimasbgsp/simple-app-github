@@ -1,0 +1,5 @@
+services:
+  webserver:
+    image: ghcr.io/dimasbgsp/nginx-dibako
+    ports:
+      - "8080:80"
