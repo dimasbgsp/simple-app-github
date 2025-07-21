@@ -27,10 +27,10 @@ jobs:
       - name: Login to GitHub Registry
         run: echo ${{ secrets.TOKEN_GITHUB }} | docker login ghcr.io -u dimasbgsp --password-stdin
       - name: stop and remove existing container
-        run: docker-compose down --rmi all
+        run: docker compose down --rmi all
       - name: start container
-        run: docker-compose up -d
+        run: docker compose up -d
       - name: view container
-        run: docker-compose ps
+        run: docker compose ps
       - name: check container
         run: curl localhost:8080
